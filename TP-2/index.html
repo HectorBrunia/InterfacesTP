@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>    
+    <title>elenemigos games</title>
+</head>
+<body>
+    <div class="loading">
+        <span class="loader"></span>
+        <label class="percent">100%</label>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+    <header>
+        <nav class="menu">
+            <div class="bloque-1">
+                <div class="bars__menu">
+                    <span class="line1__bars-menu"></span>
+                    <span class="line2__bars-menu"></span>
+                    <span class="line3__bars-menu"></span>
+                </div>
+                <div class="logo">
+                    <img src="img/iconos/joker_icono.png">
+                    <h1>ELENEMIGOS GAMES</h1>
+                </div>
+            </div>
+            <div class="bloque-2">
+                <input type="texte" placeholder="BUSCAR" class="inputnav">
+                <button type="button" class="btnbuscar"><img src="img/iconos/lupa2.png" alt="" class="imglupa"></button>
+            </div>
+            <div class="hamburguesa">
+                <div class="user">
+                    <div class="backuser">
+                        <img src="img/iconos/usuario.png" alt="" >
+                    </div>
+                    <p>Usuario</p>
+                </div>
+                <div class="list-menu">
+                    <ul>
+                        <li><span>Inicio</span></li>
+                        <li><span>Mi cuenta</span></li>
+                        <li><span>Notificaciones</span></li>
+                        <li><span>hitorial</span></li>
+                        <li><span>Asistencia</span></li>
+                        <li><span>Favoritos</span></li>
+                        <li><span>Configuraciones</span></li>
+                        <li><a href="login.html"><span>Cerrar sesion</span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <article class="destacados">
+            <h2>MÁS DESTACADOS</h2>
+            <div class="slider">
+                <ul>
+                    <li id="slider1">
+                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/10/batman-vs-joker-2835193.jpg?tf=3840x" alt="">
+                        <div class="text">
+                            <h3>Batman vs Joker</h3>
+                            <p>⭐⭐⭐⭐⭐</p>
+                            <p>Deja de estar aburrido con ELEnemigos Games! con nuestra increible seleccion de juegos, para que lleves la diversion al siguiente nivel. Tambien tenemos los mejores precios, para que no pares de divertirte!</p>
+                            <a href="batmanvsjoker.html" class="rainbow-button">PLAY</a>
+                        </div>
+                    </li>
+                    <li id="slider2">
+                        <img src="https://variety.com/wp-content/uploads/2023/10/cyberpunk.jpeg" alt="">
+                        <div class="text">
+                            <h3>Cyberpunk-2077</h3>
+                            <p>⭐⭐⭐⭐⭐</p>
+                            <p>Cyberpunk 2077 es un videojuego perteneciente al género rol de acción y disparos en primera persona desarrollado y publicado por CD Projekt, que se lanzó para Microsoft Windows, PlayStation 4 y Xbox One el 10 de diciembre de 2020, y posteriormente en PlayStation 5, Xbox Series X|S y Google Stadia</p>
+                            <a href="#" class="rainbow-button">PLAY</a>
+                        </div>
+                    </li >
+                    <li id="slider3">
+                        <img src="https://assets-prd.ignimgs.com/2022/03/14/cod-1647224857106.jpg" alt="">
+                        <div class="text">
+                            <h3>Call-of-Duty-1</h3>
+                            <p>⭐⭐⭐⭐⭐</p>
+                            <p>Call of Duty es un videojuego de disparos en primera persona de tipo bélico desarrollado por Infinity Ward. El videojuego es el primer título de la franquicia en ser lanzado para las videoconsolas de séptima generación.​</p>
+                            <a href="#" class="rainbow-button">PLAY</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Donkey_Kong_flier.jpg" alt="">
+                        <div class="text">
+                            <h3>Donkey Kong</h3>
+                            <p>⭐⭐⭐⭐⭐</p>
+                            <p>Donkey Kong es una serie de videojuegos que presenta las aventuras de un personaje gorila llamado Donkey Kong, creado por Shigeru Miyamoto en 1981. La franquicia principalmente comprende videojuegos de diferentes géneros, más títulos spin-off.</p>
+                            <a href="#" class="rainbow-button">PLAY</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <section class="Carousel">
+                <h2>MÁS JUGADOS</h2>
+                <div class="carousel-contenedor">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-list" id="slick-list">
+                        <div class="slick-track" id="track">
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href="batmanvsjoker.html"><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Batman vs Joker</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/batman-vs-joker-2835193.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Pac-Man</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/pac-man.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Donkey Kong</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/donkey kong.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Call of duty 1</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/Call-of-Duty-1.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Los simpson</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/los_simpson.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Super Bomberman</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/super-bomberman.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Manhunt</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/Manhunt.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Minecraft</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/minecraft.webp" alt="Image">
+                                </picture>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+            </section>
+            <section class="Carousel">
+                <h2>Juegos tipo Souls</h2>
+                <div class="carousel-contenedor">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-list" id="slick-list">
+                        <div class="slick-track" id="track">
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$6999</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Sekiro</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/sekiro.avif" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$3000</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Dark souls</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/dark souls.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$18999</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Elden Ring</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/elden_ring.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$8999</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Lord of the fallen</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/Lords_of_the_Fallen.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$4999</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">demons souls</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/demons-souls.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$10000</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Lies of P</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/lies-p.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$5000</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Sekiro</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/sekiro.avif" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$1899</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Dark souls</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/dark souls.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+            </section>
+            <section class="Carousel">
+                <h2>EN EL CARRO</h2>
+                <div class="carousel-contenedor">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-list" id="slick-list">
+                        <div class="slick-track" id="track">
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$1899</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Dark souls</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/dark souls.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$4999</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">demons souls</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/demons-souls.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--precio">$2000</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Manhunt</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/Manhunt.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">darksider 3</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/darksider3.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Borderlands</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/borderlands.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Star wars</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/star wars.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Batman vs Joker</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/dark souls.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button class="carro"><span>QUIRAR DEL CARRO</span></button></a>
+                                    <h3 class="details--title">Sekiro</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/sekiro.avif" alt="Image">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+            </section>
+            <section class="Carousel">
+                <h2>Aventura</h2>
+                <div class="carousel-contenedor">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-list" id="slick-list">
+                        <div class="slick-track" id="track">
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Baldurs gate</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/baldures gate.avif" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Fallout new vegas</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/fallout new vegas.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Call of duty MW2</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/call of duty mw2.avif" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">darksider3</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/darksider3.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Borderlands</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/borderlands.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Star wars</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/star wars.webp" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Batman vs Joker</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/dark souls.jpeg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <h3 class="details--gratis">GRATIS</h3>
+                                    <a href=""><button><span>JUGAR</span></button></a>
+                                    <h3 class="details--title">Sekiro</h3>
+                                </div>
+                                <picture>
+                                    <img src="img/Juegos/sekiro.avif" alt="Image">
+                                </picture>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+            </section>
+        </article>
+    </div>
+    <footer class="column">
+        <div class="centertext">
+            <h2>Acerca de ElenemigosGames</h2>
+            <p>
+                Deja de estar aburrido con ELEnemigos Games! con nuestra increible seleccion de juegos, para que lleves la diversion al siguiente nivel. Tambien tenemos los mejores precios, para que no pares de divertirte!
+            </p>
+        </div>
+        <div class="footeritems">
+            <div class="itemf centertext">
+                <h3>Contacto</h3>
+                <p>08002845</p>
+                <p>elenemigos-support@hotmail.com</p>
+            </div>
+            <div class="main">
+                <h3>Redes sociales</h3>
+                <div class="icons">
+                    <div class="icon fb">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>ElEnemigos</span>
+                    </div>
+            
+                    <!-- Twitter Icon -->
+                    <div class="icon twt">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span>ElEnemigos</span>
+                    </div>
+            
+                    <!-- Linkedin Icon -->
+                    <div class="icon lnk">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>ElEnemigos</span>
+                    </div>
+    
+                    <!-- YouTube Icon -->
+                    <div class="icon yt">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>ElEnemigos</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="  itemf centertext soporte">
+                <h3>Soporte</h3>
+                <p>centro de ayuda</p>
+                <p>guias</p>
+            </div>
+            <div class="itemf centertext noticias">
+                <h3>Noticas</h3>
+                <p>Blog</p>
+                <p>Espacio de prensa</p>
+            </div>
+        </div>
+</footer> 
+    <script src="js/hamburguesa.js">
+    </script> <script src="js/js.js"></script>
+</body>
+
+</html>

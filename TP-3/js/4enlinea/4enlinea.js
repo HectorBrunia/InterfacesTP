@@ -2,7 +2,7 @@ let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d')
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
-ctx.font = "30px alarm-font";
+ctx.font = "30px arial";
 ctx.fillStyle = "rgb(208,113,26)";
 ctx.textAlign = "center";
 let characterPic_1;
@@ -96,12 +96,6 @@ function setCharacters(player_1, player_2, cant){
     createChips(cant, chips_1, chips_2)
 }
 
-
-//ESTE METODO SE ENCARGA DE PONER EL NOMBRE DE LOS JUGADORES
-function drawCharacters(){
-    ctx.fillText(`${gameData.player_1}`, 200 , 60)
-    ctx.fillText(`${gameData.player_2}`, 1100 , 60)
-}
 
 //ESTE METODO SE ENCARGA DE CREAR EL TABLERO PONIENDO TODO EN NULL
 function chargueBoard(row,column){
@@ -210,7 +204,8 @@ function createChips(cant, chips_1, chips_2) {
 function drawChips() {
     let players = game.getPlayers();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawCharacters()
+    ctx.fillText(`${gameData.player_1}`, 200 , 60);
+    ctx.fillText(`${gameData.player_2}`, 1100 , 60);
     drawBoard();
     for (let j = 0; j < players.length; j++) {
         let chips = players[j].getChips();

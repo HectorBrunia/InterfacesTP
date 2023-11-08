@@ -1761,7 +1761,6 @@ input[type="radio"]:checked {
 }
 
 .btns-container {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1769,9 +1768,8 @@ input[type="radio"]:checked {
   gap: 3rem;
   align-items: center;
   background-color: #000;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .game_main {
   margin: 0% auto;

@@ -53,7 +53,7 @@ let characters = [
 //FUNCION PARA EL BOTON RESET PARA QUE SE MUESTRE EL FORMULARIO DEL JUEGO Y SE OCULTE LA PANTALLA DEL GANADOR
 document.getElementById('reset-btn').onclick = function() {
     document.querySelector('form').style.display = "flex"
-    document.getElementById("winner").style.display = "none";
+    document.getElementById("ganador").style.display = "none";
     clearAll();
 }
 
@@ -115,20 +115,20 @@ function chargueBoard(row,column){
 }
 
 //ESTE METODO SE ENCARGA DE LA FUNCIONALIDAD DEL TIMER 
-function drawTimer() {
-    let i = 300;
+function drawTimer(data) {
+    let i = data.timer;
     interval = setInterval(function() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBoard()
         drawChips()
-        let x = 520
-        ctx.fillText(`${i} seconds`, x, 30);
+        let x = 530
+        ctx.fillText(`${i} segundos`, x, 30);
         ctx.fillText(` : `, x +100, 30);
-        ctx.fillText(`reset`,  x+200 ,30);
+        ctx.fillText(`reiniciar`,  x+200 ,30);
         i--;
         if(i === 0) {
-            let winnerScreen = document.getElementById('winner')
-            let winnerName = document.getElementById('winner-name')
+            let winnerScreen = document.getElementById('ganador')
+            let winnerName = document.getElementById('ganador-name')
             winnerScreen.style.display = "flex";
             winnerScreen.style.backgroundImage = "url('./img/cuatroenlinea/empate.webp')";
             winnerName.innerHTML = `<h1>EMPATE</h1>`;
@@ -140,18 +140,18 @@ function setRules(data){
     switch (data.connect) {
         case "4":{chargueBoard(6,7);
             setCharacters(data.player_1, data.player_2, 21);
-            drawTimer()
+            drawTimer(data)
             break;
         }
         case "5":{chargueBoard(7,8);
             setCharacters(data.player_1, data.player_2, 28);
-            drawTimer()
+            drawTimer(data)
             break;
         }
         case "6":{
             chargueBoard(8,9);
             setCharacters(data.player_1, data.player_2, 36);
-            drawTimer()
+            drawTimer(data)
             break;
         }
         default:{break;}   
@@ -234,8 +234,8 @@ canvas.addEventListener('mouseup', (e) => {
             let winner = game.checkWinner(columnPos, rowPos , gameData.connect)
             if(winner != undefined) {
                 if(winner[0] === true) {
-                    let winnerScreen = document.getElementById('winner')
-                    let winnerName = document.getElementById('winner-name')
+                    let winnerScreen = document.getElementById('ganador')
+                    let winnerName = document.getElementById('ganador-name')
                     winnerScreen.style.display = "flex";
                     if (winner[1] =="1") {
                         winnerScreen.style.backgroundImage = "url('./img/cuatroenlinea/batmanwin.jpg')";

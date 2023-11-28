@@ -1,0 +1,848 @@
+*{
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+body{    
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    font-family: Lato;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    position: fixed;
+    width: 100% ;
+    z-index: 5;
+    transition: all 1.5s ease; /* Agrega una transición suave para el cambio de tamaño y posición */
+    height: 75px;
+}
+.logo{
+    height: 70px;
+    width: 140px;
+    display: none;
+    margin-right: -105px;
+    position: absolute;
+    left: 45%;
+}
+
+header{
+    background-color: transparent;
+}
+
+.container-titulo{
+    margin-top: 150px;
+}
+.spiderman{
+    margin-top: -30px;
+}
+
+.container-titulo, .spiderman{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
+
+.buy{
+    width: 200px;
+    height: 50px;
+    color: #02187E;
+    background: #FFE901;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
+    letter-spacing: 2.2px;
+    border-radius: 111px;
+    border: 8px solid #2982FF;
+    flex-shrink: 0;
+    -webkit-text-stroke: 2px;
+    margin-top: 15px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+.buy:hover{
+    background-color: #fff;
+    transform: translateY(-5px);
+}
+.sombra{
+    box-shadow: 4px 5px 0px 0px  #02187E;
+}
+.buyNow{
+    width: 250px;
+}
+/*               boton hamburguesa               */
+
+
+#hamburguer button{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    margin-top: 12px;
+}
+
+#hamburguer button span{
+    border-radius: 5px;
+    border: 5px solid #2982FF;
+    background: #FFE901;
+    display: block;
+    width: 60%;
+    margin: 2px auto;
+    height: 3px;
+    margin-left: 15px;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#hamburguer button.open .top-line{
+    animation-name: top-line-animation;
+}
+
+#hamburguer button.open .middle-line{
+    animation-name: middle-line-animation;
+}
+
+#hamburguer button.open .botton-line{
+    animation-name: botton-line-animation;
+}
+
+#hamburguer button .top-line{
+    animation-name: top-line-animation-close;
+}
+
+#hamburguer button .middle-line{
+    animation-name: middle-line-animation-close;
+}
+
+#hamburguer button .botton-line{
+    animation-name: botton-line-animation-close;
+}
+
+@keyframes top-line-animation{
+    50%, 100%{
+        transform: translateY(10px) rotate(-45deg);
+        box-shadow: none;
+    }
+}
+
+@keyframes botton-line-animation{
+    50%, 100%{
+        transform: translateY(-20px) rotate(45deg);
+        box-shadow: none;
+    }
+}
+
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0;  
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.sidebar {
+    width: 0;
+    height: 200px;
+    background-color: #333;
+    overflow: hidden;
+    transition: width 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar-item {
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.sidebar-item:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.sidebar-item:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.sidebar-item:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+/* seccion 2 */
+.duende{
+    margin-top: -26px;
+    z-index: 1;
+}
+.section-2{ 
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #8F6AA6;
+    overflow: visible;
+    margin-top: -16px;
+}
+.section-2::before{
+    position: absolute;
+    content: " ";
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    bottom:  0%;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+}
+.desc-1{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0px auto;
+    color: white;
+    z-index: 1;
+    margin-top: 120px;
+}
+.titulo-desc{
+    font-size: 60px;
+}
+.desc-text{
+    font-size: 20px;
+}
+
+
+/* seccion 3 */
+
+.section-3 {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 200px;
+    height: 985px;
+  }
+  
+  .ch-peter.character {
+    width: 337px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: opacity 0s ease-in-out, transform 1s ease-in-out;
+  }
+  .ch-miles.character {
+    width: 337px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out;
+  }
+  .ch-gwen.character {
+    width: 337px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+  }
+  
+  .character.active {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+
+
+/*  seccion 4    */
+
+.section-4{
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 350px;
+}
+
+
+.Ghost-background{
+    position: relative;
+    top: -450px;
+}
+
+.Ghost-background img{
+    width: 100%;
+}
+
+.game-1{
+    position: absolute;
+    top:-560px;
+    transition: transform 0.3s ease;
+}
+
+.game-2{
+    position: absolute;
+    top:-440px;
+    transition: transform 0.3s ease;
+}
+.game-3{
+    position: absolute;
+    top:-250px;
+    left: 30px;
+    transition: transform 0.3s ease;
+}
+.game-1:hover,
+.game-2:hover,
+.game-3:hover {
+    transform: rotate(10deg); 
+    z-index: 1;
+}
+
+
+/* seccion 5 */
+
+
+.section-5{
+    position: relative;
+    height: 924px;
+    color: white;
+    padding-top: 150px;
+}
+.section-5::before{
+    position: absolute;
+    content: " ";
+    background-color: white;
+    width: 100%;
+    height: 380px;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    bottom: 12px;
+}
+.section-5 h1{
+    font-size: 60px;
+    width: 667px;
+    margin-left: 430px;
+    padding-bottom: 95px;
+}
+.vengadores{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+}
+.fondo-vengadores{
+    background-image: url(img/fondo-vengadores.png);
+    position: absolute;
+    height: 527.63px;
+    width: 1077.06px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.arboles{
+    background-image: url(img/arboles.png);
+    position: absolute;
+    height: 527.63px;
+    width: 1077.06px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pasto{
+    background-image: url(img/pasto.png);
+    position: absolute;
+    height: 527.63px;
+    width: 1077.06px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hulk{
+    background-image: url(img/hulk.png);
+    background-size: cover;
+    position: absolute;
+    width: 410px;
+    height: 437px;
+    top: 593px;
+    left: 1100px;
+}
+.pant-negra{
+    background-image: url(img/pant-negra.png);
+    position: absolute;
+    width: 407.31px;
+    height: 552.46px;
+    background-size: cover;
+    top: 217px;
+    left: 900px;
+}
+.ms-marvel{
+    background-image: url(img/ms-marvel.png);
+    background-size: cover;
+    position: absolute;
+    width: 462.26px;
+    height: 675.44px;
+    top: 356px;
+    left: 432px;
+}
+/* seccion 6 */
+
+ /**/
+ .masamigos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 215px;
+    margin-top: -12px;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
+    background-color: #fff; 
+    font-family: 'Lato';
+  }
+  .centerS6 {
+    width: 1080px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #fff; 
+    margin-bottom: 70px;
+  }
+  .centerS6 h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%;
+    margin-bottom: 62px;
+  }
+  .ma-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ma-imagenes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    position: sticky;
+    top: 35%;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-ma {
+    position: absolute;
+    width: 552px;
+    height: 300px;
+    opacity: 0;
+    transition: all 0.6s ease-in;
+  }
+  .showImg {
+    z-index: 1;
+    opacity: 1;
+  }
+  #ma-img-1 {
+    background-image: url(img/moref-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #ma-img-2 {
+    background-image: url(img/moref-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #ma-img-3 {
+    background-image: url(img/moref-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #ma-img-4 {
+    background-image: url(img/moref-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ma-text {
+    position: relative;
+    width: 467px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    box-sizing: border-box;
+  }
+  .texto {
+    width: 467px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    opacity: 0;
+    transition: all 0.6s ease-in;
+  }
+  .showTexto {
+    opacity: 1;
+  }
+  .ma-text h3 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .ma-text p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+
+/* seccion 7 */
+
+.section-7 {
+    position: relative;
+    font-size: 50px;
+    padding: 20px;
+    color: #fff;
+    padding-bottom: 81px;
+}
+
+
+
+/* seccion 8 */
+
+.section-8{
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+    height: 882px;
+    width: 100%;
+    background-color:white;
+    transition: background-color 1s;
+    z-index: 1;
+    margin-top: -138px;
+}
+
+.seleccion{
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+    background-color: white;
+    padding-top: 103px;
+    margin-top: 56px;
+    height: 666px;
+    transition: background-color 1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    transition: all 1s ;
+    margin-top: 40px;
+}
+
+.seleccion .card:hover ~ .card{
+    transform: translate3d(40px, 0, 0);
+}
+.seleccion:hover .card{
+    opacity: 0.6;
+}
+.seleccion:hover .card:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.gwen2:hover ~ .section-8 {
+    background-color: #000; 
+}
+
+.peter2:hover ~ .section-8{
+    background-color: lightblue; 
+}
+
+.miles2:hover ~ .section-8 {
+    background-color: #27ae60; 
+}
+/* seccion 9 */
+.section-9 h2{
+    margin-top: 300px;
+    font-size: 60px;
+    width: 816px;
+    text-align: center;
+}
+.section-9{
+    background-image: url("img/fondo-form.png");
+    height: 1544px;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -178px;
+}
+.section-9 p{
+    width: 578px;
+    font-size: 20px;
+}
+
+.edadR{
+    margin-top: 40px;
+    display: flex;
+    align-items: start;
+    width: 45%;
+}
+
+.formSub{
+    padding-top: 100px;
+    display: flex; 
+    width: 780px;
+    height:100px;
+    margin: 45px auto;
+}
+
+.formSub input::placeholder {
+    padding-left: 40px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.5%;
+    letter-spacing: 2.2px;
+}
+
+.inputSub{
+    width: 562px;
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid #2982ff;
+    border-bottom: 9px solid #2982ff;
+    border-left: 9px solid #2982ff;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.buttonSub{
+    width: 218px;
+    border-radius: 0px 50px 50px 0px;
+    border: 9px solid #2982ff;
+    background: #ffe901;
+    color: #02187e;
+    font-family: 'Lato';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
+    letter-spacing: 2.2px; 
+    -webkit-text-stroke: 2px;
+    cursor: pointer;
+}
+
+
+
+.plataformas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #242424;
+    
+}
+
+
+footer{
+    background-color: #5E5E5D;
+    height: 598px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    height: 361px;
+    width: 820px;
+    font-size: 20px;
+}
+
+
+.parallax-container {
+    position: relative;
+    background-color: #8F6AA6;
+    width: 100%;
+    height: 1200px;
+    overflow: hidden;
+    margin-bottom: -225px;
+  }
+
+  .parallax-container::before{
+    position: absolute;
+    content: " ";
+    background-color: #8F6AA6;
+    width: 100%;
+    height: 200px;
+    bottom:  20%;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+}
+  
+  .parallax-layer, .layer-logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+  
+  .fanodo {
+    background-image: url('img/parallax-1.png');
+    background-size: 128%;
+    height: 93vh;
+  }
+  
+  .edificios {
+    background-image: url("img/parallax-2.png");
+    background-size: 100%;
+    height: 102vh;
+    width: 101%;
+    top: -10%;
+  }
+  
+  .layer-logo {
+    background-image: url("img/parallax-4.png");
+    top: 12%;
+    left: 36%;
+    width: 500px;
+    height: 200px;
+  }
+  .miles{
+    position: absolute;
+    background-position: center;
+    will-change: transform;
+    background-image: url("img/miles.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 32%;
+    left: 68%;
+    width: 700px;
+    height: 400px;
+  }
+  .peter{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    background-image: url("img/peter.png");
+    background-repeat: no-repeat;
+    top: 35%;
+    left: -9%;
+    width: 1290px;
+    height: 600px;
+    z-index: 2;
+  }
+  .gwen{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    background-image: url("img/gwen.png");
+    top: 35%;
+    left: 10%;
+    width: 300px;
+    height: 400px;
+  }
+  .spiders {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 100px;
+  }
+
+
+/*       seccion personajes      */
+.animacion-peter{
+    background-image: url(img/peter-defensa.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    margin-left: 1090px;
+    margin-top: 256px;
+}
+.defensa{
+    animation: defensa 2s steps(10) infinite;
+}
+.pegar{
+    animation: pegar2 2s steps(6) infinite;
+}
+.final{
+    animation: final 2s steps(1) infinite
+}
+.animar{
+    background-image: url(img/corriendo.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 43px;
+    margin-left: -1427px;
+    margin-top: -180px;
+}
+
+.animar-activa {
+    animation: pegar1 1s steps(6), saltar 1s steps(9) 1s,
+    saltar2 1s steps(6) 2s, final 1s steps(1) infinite 3s;
+}
+@keyframes pegar1 {
+    to {
+        background-position: -238px 0px;
+        margin-right: -100px;
+    }
+}
+
+@keyframes saltar {
+    from{
+        background-position: -238px 0px;
+        margin-right: -100px;
+    }
+    to {
+        background-position: -596px 0px;
+        margin-right: -1000px;
+        margin-top: 150px;
+    }
+}
+@keyframes saltar2 {
+    from{
+        background-position: -596px 0px;
+        margin-right: -1000px;
+        margin-top: 150px;
+    }
+    to {
+        background-position: -842px 0px;
+        margin-right:-2220px;
+        margin-top:-45px;
+    }
+}
+@keyframes final {
+    from {
+        background-position: -842px 0px;
+        margin-right: -2420px;
+        margin-top: -45px;
+    }
+    to{
+        background-position: -878px 0px;
+        margin-right: -2420px;
+        margin-top: 181px;
+    }
+}
+@keyframes pegar2 {
+    from{
+        background-position: 0px 0px;
+        margin-right: -2420px;
+        margin-top: -45px;
+    }
+    to {
+        background-position: -238px 0px;
+        margin-right: -2420px;
+        margin-top: -45px;
+    }
+}
+@keyframes defensa {
+    to{
+        background-position: -420px 0px;
+    }
+}
+
+

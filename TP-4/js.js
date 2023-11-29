@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-/* DUENDE VERDE */
-
+/* SECCION 2 */
 document.addEventListener("DOMContentLoaded", function () {
     var duende = document.getElementById('duende');
 
@@ -61,14 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Calcula la nueva posición del duende verde en función del scroll
         var translateY = scrollPos * speed;
-
-        // Aplica la transformación para mover el duende verde
         duende.style.transform = 'translateY(' + translateY + 'px)';
     });
 });
 
 /* PARALLAX HEADER */
-
 document.addEventListener('DOMContentLoaded', function () {
     const layers = document.querySelectorAll('.parallax-layer');
     peter = document.querySelector('.peter');
@@ -94,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-/* SECCION PERSONAJES */
+/* SECCION 3 */
 
   document.addEventListener('DOMContentLoaded', function () {
     const characters = document.querySelectorAll('.character');
@@ -113,7 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
   
     window.addEventListener('scroll', fadeInOnScroll);
   });
-//////////////////////////////////////////////////////////////////////////
+
+
+/* SECCION 6 */
   document.addEventListener("scroll", () => {
     function clean() {
         document.querySelectorAll(".img-ma").forEach((s) => {
@@ -144,20 +142,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector("#text-4").classList.add("showTexto");
     }
 });
-
+ /* SECCION  9*/
 window.addEventListener('scroll', function() {
     var miles = document.getElementById('animacion-miles');
     
     var posicion = miles.getBoundingClientRect().top;
-
-    // Ajusta la posición en la que quieres que se active la animación
     if (posicion < window.innerHeight ) {
         miles.classList.add('animar-activa');
     } else {
         miles.classList.remove('animar-activa');
     }
 });
-
 var animacionmiles = document.getElementById('animacion-miles');
 var animacionpeter = document.getElementById('animacion-peter');
 animacionpeter.addEventListener('mouseover',() => {
@@ -184,7 +179,7 @@ animacionmiles.addEventListener('mouseout',() => {
     animacionpeter.classList.remove('defensa');
 } )
 
-
+/* SECCION 5 */
 function parallax(event) {
     let layers = document.querySelectorAll('.vengadores > div');
     layers.forEach(layer => {
@@ -195,6 +190,7 @@ function parallax(event) {
     });
 }
 
+/* SECCION 8 */
 carpeter= document.getElementById('peter').addEventListener('mousemove',()=>{
     document.querySelector('.section-8').style.backgroundColor = 'rgba(37, 82, 200, 1)'
     
